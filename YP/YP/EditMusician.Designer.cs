@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDeleteMusician = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFirstNameDelete = new System.Windows.Forms.TextBox();
             this.buttonInsertMusician = new System.Windows.Forms.Button();
@@ -40,24 +40,24 @@
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.groupBoxDelete = new System.Windows.Forms.GroupBox();
-            this.groupBoxCreateUpdate = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDiscription = new System.Windows.Forms.TextBox();
-            this.textBoxBand = new System.Windows.Forms.TextBox();
-            this.textBoxSurnameDelete = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxSurnameDelete = new System.Windows.Forms.TextBox();
+            this.groupBoxCreateUpdate = new System.Windows.Forms.GroupBox();
+            this.textBoxBand = new System.Windows.Forms.TextBox();
+            this.textBoxDiscription = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBoxDelete.SuspendLayout();
             this.groupBoxCreateUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonDeleteMusician
             // 
-            this.button1.Location = new System.Drawing.Point(20, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDeleteMusician.Location = new System.Drawing.Point(20, 126);
+            this.buttonDeleteMusician.Name = "buttonDeleteMusician";
+            this.buttonDeleteMusician.Size = new System.Drawing.Size(94, 29);
+            this.buttonDeleteMusician.TabIndex = 3;
+            this.buttonDeleteMusician.Text = "Delete";
+            this.buttonDeleteMusician.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -145,7 +145,7 @@
             // 
             this.groupBoxDelete.Controls.Add(this.label6);
             this.groupBoxDelete.Controls.Add(this.textBoxSurnameDelete);
-            this.groupBoxDelete.Controls.Add(this.button1);
+            this.groupBoxDelete.Controls.Add(this.buttonDeleteMusician);
             this.groupBoxDelete.Controls.Add(this.label1);
             this.groupBoxDelete.Controls.Add(this.textBoxFirstNameDelete);
             this.groupBoxDelete.Location = new System.Drawing.Point(233, 439);
@@ -154,6 +154,22 @@
             this.groupBoxDelete.TabIndex = 3;
             this.groupBoxDelete.TabStop = false;
             this.groupBoxDelete.Text = "Delete musician by name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(234, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Surname:";
+            // 
+            // textBoxSurnameDelete
+            // 
+            this.textBoxSurnameDelete.Location = new System.Drawing.Point(234, 76);
+            this.textBoxSurnameDelete.Name = "textBoxSurnameDelete";
+            this.textBoxSurnameDelete.Size = new System.Drawing.Size(196, 27);
+            this.textBoxSurnameDelete.TabIndex = 0;
             // 
             // groupBoxCreateUpdate
             // 
@@ -174,14 +190,12 @@
             this.groupBoxCreateUpdate.TabStop = false;
             this.groupBoxCreateUpdate.Text = "Create and update musician:";
             // 
-            // label5
+            // textBoxBand
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 289);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Band:";
+            this.textBoxBand.Location = new System.Drawing.Point(40, 325);
+            this.textBoxBand.Name = "textBoxBand";
+            this.textBoxBand.Size = new System.Drawing.Size(191, 27);
+            this.textBoxBand.TabIndex = 10;
             // 
             // textBoxDiscription
             // 
@@ -190,28 +204,14 @@
             this.textBoxDiscription.Size = new System.Drawing.Size(191, 27);
             this.textBoxDiscription.TabIndex = 9;
             // 
-            // textBoxBand
+            // label5
             // 
-            this.textBoxBand.Location = new System.Drawing.Point(40, 325);
-            this.textBoxBand.Name = "textBoxBand";
-            this.textBoxBand.Size = new System.Drawing.Size(191, 27);
-            this.textBoxBand.TabIndex = 10;
-            // 
-            // textBoxSurnameDelete
-            // 
-            this.textBoxSurnameDelete.Location = new System.Drawing.Point(234, 76);
-            this.textBoxSurnameDelete.Name = "textBoxSurnameDelete";
-            this.textBoxSurnameDelete.Size = new System.Drawing.Size(196, 27);
-            this.textBoxSurnameDelete.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(234, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Surname:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 289);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Band:";
             // 
             // EditMusician
             // 
@@ -232,7 +232,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDeleteMusician;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxFirstNameDelete;
         private System.Windows.Forms.Button buttonInsertMusician;

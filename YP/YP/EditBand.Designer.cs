@@ -115,7 +115,7 @@
             this.buttonUpdateBand.Name = "buttonUpdateBand";
             this.buttonUpdateBand.Size = new System.Drawing.Size(230, 64);
             this.buttonUpdateBand.TabIndex = 6;
-            this.buttonUpdateBand.Text = "Update by name";
+            this.buttonUpdateBand.Text = "Update band name by name";
             this.buttonUpdateBand.UseVisualStyleBackColor = true;
             // 
             // textBoxDescription

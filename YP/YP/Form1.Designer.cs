@@ -78,6 +78,7 @@
             this.buttonSeeBands.TabIndex = 1;
             this.buttonSeeBands.Text = "See bands";
             this.buttonSeeBands.UseVisualStyleBackColor = true;
+            this.buttonSeeBands.Click += new System.EventHandler(this.buttonSeeBands_Click);
             // 
             // listBands
             // 
@@ -151,6 +152,7 @@
             this.buttonEditDiscs.TabIndex = 5;
             this.buttonEditDiscs.Text = "Edit discs";
             this.buttonEditDiscs.UseVisualStyleBackColor = true;
+            this.buttonEditDiscs.Click += new System.EventHandler(this.buttonEditDiscs_Click);
             // 
             // buttonSeeDiscs
             // 
@@ -169,6 +171,7 @@
             this.buttonEditPerfomances.TabIndex = 3;
             this.buttonEditPerfomances.Text = "Edit perfomances";
             this.buttonEditPerfomances.UseVisualStyleBackColor = true;
+            this.buttonEditPerfomances.Click += new System.EventHandler(this.buttonEditPerfomances_Click);
             // 
             // buttonSeePerfomances
             // 
