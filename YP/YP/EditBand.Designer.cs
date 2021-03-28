@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNameDelete = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxDelete = new System.Windows.Forms.GroupBox();
             this.buttonDeleteBand = new System.Windows.Forms.Button();
             this.groupBoxCreateUpdate = new System.Windows.Forms.GroupBox();
             this.buttonInsertBand = new System.Windows.Forms.Button();
             this.buttonUpdateBand = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxBandName = new System.Windows.Forms.TextBox();
+            this.textBoxTypeBand = new System.Windows.Forms.TextBox();
             this.groupBoxDelete.SuspendLayout();
             this.groupBoxCreateUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxNameDelete
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 27);
-            this.textBox1.TabIndex = 0;
+            this.textBoxNameDelete.Location = new System.Drawing.Point(20, 76);
+            this.textBoxNameDelete.Name = "textBoxNameDelete";
+            this.textBoxNameDelete.Size = new System.Drawing.Size(196, 27);
+            this.textBoxNameDelete.TabIndex = 0;
             // 
             // label2
             // 
@@ -65,7 +65,7 @@
             // 
             this.groupBoxDelete.Controls.Add(this.buttonDeleteBand);
             this.groupBoxDelete.Controls.Add(this.label2);
-            this.groupBoxDelete.Controls.Add(this.textBox1);
+            this.groupBoxDelete.Controls.Add(this.textBoxNameDelete);
             this.groupBoxDelete.Location = new System.Drawing.Point(250, 324);
             this.groupBoxDelete.Name = "groupBoxDelete";
             this.groupBoxDelete.Size = new System.Drawing.Size(250, 179);
@@ -87,12 +87,12 @@
             // 
             this.groupBoxCreateUpdate.Controls.Add(this.buttonInsertBand);
             this.groupBoxCreateUpdate.Controls.Add(this.buttonUpdateBand);
-            this.groupBoxCreateUpdate.Controls.Add(this.textBox4);
+            this.groupBoxCreateUpdate.Controls.Add(this.textBoxDescription);
             this.groupBoxCreateUpdate.Controls.Add(this.label4);
             this.groupBoxCreateUpdate.Controls.Add(this.label3);
             this.groupBoxCreateUpdate.Controls.Add(this.label1);
-            this.groupBoxCreateUpdate.Controls.Add(this.textBox3);
-            this.groupBoxCreateUpdate.Controls.Add(this.textBox2);
+            this.groupBoxCreateUpdate.Controls.Add(this.textBoxBandName);
+            this.groupBoxCreateUpdate.Controls.Add(this.textBoxTypeBand);
             this.groupBoxCreateUpdate.Location = new System.Drawing.Point(35, 28);
             this.groupBoxCreateUpdate.Name = "groupBoxCreateUpdate";
             this.groupBoxCreateUpdate.Size = new System.Drawing.Size(713, 290);
@@ -118,12 +118,12 @@
             this.buttonUpdateBand.Text = "Update by name";
             this.buttonUpdateBand.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // textBoxDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(40, 243);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 27);
-            this.textBox4.TabIndex = 5;
+            this.textBoxDescription.Location = new System.Drawing.Point(40, 243);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(191, 27);
+            this.textBoxDescription.TabIndex = 5;
             // 
             // label4
             // 
@@ -152,28 +152,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name of band:";
             // 
-            // textBox3
+            // textBoxBandName
             // 
-            this.textBox3.Location = new System.Drawing.Point(40, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 27);
-            this.textBox3.TabIndex = 1;
+            this.textBoxBandName.Location = new System.Drawing.Point(40, 76);
+            this.textBoxBandName.Name = "textBoxBandName";
+            this.textBoxBandName.Size = new System.Drawing.Size(191, 27);
+            this.textBoxBandName.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxTypeBand
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 27);
-            this.textBox2.TabIndex = 0;
+            this.textBoxTypeBand.Location = new System.Drawing.Point(40, 156);
+            this.textBoxTypeBand.Name = "textBoxTypeBand";
+            this.textBoxTypeBand.Size = new System.Drawing.Size(191, 27);
+            this.textBoxTypeBand.TabIndex = 0;
             // 
-            // EditBands
+            // EditBand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 529);
             this.Controls.Add(this.groupBoxCreateUpdate);
             this.Controls.Add(this.groupBoxDelete);
-            this.Name = "EditBands";
+            this.Name = "EditBand";
             this.Text = "EditBands";
             this.groupBoxDelete.ResumeLayout(false);
             this.groupBoxDelete.PerformLayout();
@@ -185,17 +185,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNameDelete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBoxDelete;
         private System.Windows.Forms.Button buttonDeleteBand;
         private System.Windows.Forms.GroupBox groupBoxCreateUpdate;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxBandName;
+        private System.Windows.Forms.TextBox textBoxTypeBand;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonInsertBand;
         private System.Windows.Forms.Button buttonUpdateBand;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }

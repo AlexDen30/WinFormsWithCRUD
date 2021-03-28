@@ -33,11 +33,5 @@ namespace YP.ModelsAndRepos.Discs
         public string ListOfSongs { get; set; }
     }
 
-    public class DiscHasSong
-    {
-        public int SongPerfomanceId { get; set; }
-        public int DiscSerialNumber { get; set; }
-        public int SongNumber { get; set; }
-
-    }
+    
 }
