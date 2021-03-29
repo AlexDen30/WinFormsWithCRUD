@@ -37,4 +37,11 @@ namespace YP.ModelsAndRepos.PerformedSongs
 
     }
 
+    public class AuthorOfASong
+    {
+        public int AuthorId { get; set; }
+
+        public int SongId { get; set; }
+    }
+
 }

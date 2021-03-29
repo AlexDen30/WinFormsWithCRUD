@@ -11,7 +11,7 @@ namespace YP.ModelsAndRepos.Bands
 
         public IEnumerable<BandModel> GetAllBands();
 
-        public bool UpdateBandName(BandModel newBand);
+        public bool UpdateBandName(string oldName, string newName);
 
         public bool DeleteBand(string bandName);
     }

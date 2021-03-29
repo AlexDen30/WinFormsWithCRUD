@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YP.ModelsAndRepos.Bands;
+using YP.ModelsAndRepos.Musicians;
 
 namespace YP
 {
@@ -18,6 +19,8 @@ namespace YP
             InitializeComponent();
         }
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -25,7 +28,7 @@ namespace YP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditBand editBand = new EditBand();
+            EditBand editBand = new EditBand(this);
             editBand.Show();
         }
 
@@ -61,6 +64,29 @@ namespace YP
             }
         }
 
+        private void buttonSeeMusicians_Click(object sender, EventArgs e)
+        {
+            IMusiciansRepository bandsRep = new MusiciansRepository();
+            List<MusicianModel> musicians = bandsRep.GetAllMusicians().ToList();
+
+            listMusicians.Items.Clear();
+
+            foreach (MusicianModel musician in musicians)
+            {
+                string toList = "First name: " + musician.FirstName + ", Second name:"
+                    + musician.Surname + ", Role description:" + musician.DiscriptionOfRole +
+                    ", Current band:";
+                if (musician.BandName == null)
+                {
+                    toList += "none";
+                } else
+                {
+                    toList += musician.BandName;
+                }
+                 
+                listMusicians.Items.Add(toList);
+            }
+        }
     }
 
 }

@@ -20,32 +20,32 @@ namespace YP.ModelsAndRepos.Bands
         {
             using (OracleConnection db = new OracleConnection(connectionString))
             {
-                string BANDNAME = band.BandName;
+                string BN = band.BandName;
                 string DOT = band.DiscriptionOfType;
                 string sql2 = "SELECT nvl(type_id, 0) FROM Band_type WHERE discription_of_type = :DOT";
-                string sql1 = "SELECT nvl(band_id, 0) FROM Bands WHERE band_name = :BANDNAME";
-                string sql4 = "INSERT INTO Band(band_name, type_id) " +
-                    "VALUES (:BANDNAME, :TID)";
+                string sql1 = "SELECT nvl(band_id, 0) FROM Bands WHERE band_name = :BN";
+                string sql4 = "INSERT INTO Bands(band_name, type_id) " +
+                    "VALUES (:BN, :TID)";
                 string sql3 = "INSERT INTO Band_type(discription_of_type) VALUES(:DOT)";
 
                 db.Open();
 
-                string res1 = db.Query(sql1, new { BANDNAME }).FirstOrDefault();
+                string res1 = db.Query<string>(sql1, new { BN }).FirstOrDefault();
                 
-                if (res1 == "0")
+                if (res1 != null)
                 {
                     return false;
                 }
 
-                string TID = db.Query(sql2, new { BANDNAME }).FirstOrDefault();
+                string TID = db.Query<string>(sql2, new { DOT }).FirstOrDefault();
 
-                if (TID == "0")
+                if (TID == null)
                 {
                     db.Execute(sql3, new { DOT });
-                    TID = db.Query(sql2, new { BANDNAME }).FirstOrDefault();
+                    TID = db.Query<string>(sql2, new { DOT }).FirstOrDefault();
                 }
 
-                db.Execute(sql4, new { BANDNAME, TID });
+                db.Execute(sql4, new { BN, TID });
 
                 return true;
             }
@@ -65,24 +65,24 @@ namespace YP.ModelsAndRepos.Bands
             }
         }
 
-        public bool UpdateBandName(BandModel newBand)
+        public bool UpdateBandName(string oldName, string newName)
         {
             using (OracleConnection db = new OracleConnection(connectionString))
             {
                 
                 string sql1 = "SELECT nvl(band_id, 0) FROM Bands WHERE band_name = :BANDNAME";
-                string sql2 = "UPDATE Bands SET band_name = :NAME";
+                string sql2 = "UPDATE Bands SET band_name = :NAME WHERE band_name = :BANDNAME";
                 
                 db.Open();
 
-                string res1 = db.Query(sql1, new { BANDNAME = newBand.BandName }).FirstOrDefault();
+                string res1 = db.Query<string>(sql1, new { BANDNAME = oldName }).FirstOrDefault();
 
                 if (res1 == "0")
                 {
                     return false;
                 }
 
-                db.Execute(sql2, new { newBand.BandName });
+                db.Execute(sql2, new { BANDNAME = oldName, NAME = newName });
 
                 return true;
             }
@@ -95,7 +95,7 @@ namespace YP.ModelsAndRepos.Bands
                 string sql = "DELETE FROM Bands WHERE band_name = :NAME";
                 string sql1 = "SELECT nvl(band_id, 0) FROM Bands WHERE band_name = :NAME";
 
-                string res1 = db.Query(sql1, new { BANDNAME = bandName }).FirstOrDefault();
+                string res1 = db.Query<string>(sql1, new { NAME = bandName }).FirstOrDefault();
 
                 if (res1 == "0")
                 {

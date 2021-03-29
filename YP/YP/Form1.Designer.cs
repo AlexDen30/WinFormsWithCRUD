@@ -119,10 +119,12 @@
             this.buttonSeeMusicians.TabIndex = 1;
             this.buttonSeeMusicians.Text = "See musicians";
             this.buttonSeeMusicians.UseVisualStyleBackColor = true;
+            this.buttonSeeMusicians.Click += new System.EventHandler(this.buttonSeeMusicians_Click);
             // 
             // listMusicians
             // 
             this.listMusicians.FormattingEnabled = true;
+            this.listMusicians.HorizontalScrollbar = true;
             this.listMusicians.ItemHeight = 20;
             this.listMusicians.Location = new System.Drawing.Point(217, 26);
             this.listMusicians.Name = "listMusicians";

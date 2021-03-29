@@ -58,6 +58,7 @@
             this.buttonDeleteMusician.TabIndex = 3;
             this.buttonDeleteMusician.Text = "Delete";
             this.buttonDeleteMusician.UseVisualStyleBackColor = true;
+            this.buttonDeleteMusician.Click += new System.EventHandler(this.buttonDeleteMusician_Click);
             // 
             // label1
             // 
@@ -83,6 +84,7 @@
             this.buttonInsertMusician.TabIndex = 7;
             this.buttonInsertMusician.Text = "Insert musician";
             this.buttonInsertMusician.UseVisualStyleBackColor = true;
+            this.buttonInsertMusician.Click += new System.EventHandler(this.buttonInsertMusician_Click);
             // 
             // buttonUpdateMusician
             // 
@@ -90,8 +92,9 @@
             this.buttonUpdateMusician.Name = "buttonUpdateMusician";
             this.buttonUpdateMusician.Size = new System.Drawing.Size(230, 64);
             this.buttonUpdateMusician.TabIndex = 6;
-            this.buttonUpdateMusician.Text = "Update by name";
+            this.buttonUpdateMusician.Text = "Update by name and surname";
             this.buttonUpdateMusician.UseVisualStyleBackColor = true;
+            this.buttonUpdateMusician.Click += new System.EventHandler(this.buttonUpdateMusician_Click);
             // 
             // textBox2
             // 

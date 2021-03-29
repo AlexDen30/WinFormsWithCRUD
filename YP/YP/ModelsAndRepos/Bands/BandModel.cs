@@ -19,11 +19,4 @@ namespace YP.ModelsAndRepos.Bands
         public string DiscriptionOfType { get; set; }
     }
 
-    //public class BandType
-    //{
-    //    [Key]
-    //    public int TypeId { get; set; }
-
-    //    public string DiscriptionOfType { get; set; }
-    //}
 }

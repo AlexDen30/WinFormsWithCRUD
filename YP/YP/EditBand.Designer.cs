@@ -37,10 +37,10 @@
             this.buttonUpdateBand = new System.Windows.Forms.Button();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBandName = new System.Windows.Forms.TextBox();
-            this.textBoxTypeBand = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxNewBandName = new System.Windows.Forms.TextBox();
             this.groupBoxDelete.SuspendLayout();
             this.groupBoxCreateUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -85,14 +85,14 @@
             // 
             // groupBoxCreateUpdate
             // 
+            this.groupBoxCreateUpdate.Controls.Add(this.textBoxNewBandName);
+            this.groupBoxCreateUpdate.Controls.Add(this.label3);
             this.groupBoxCreateUpdate.Controls.Add(this.buttonInsertBand);
             this.groupBoxCreateUpdate.Controls.Add(this.buttonUpdateBand);
             this.groupBoxCreateUpdate.Controls.Add(this.textBoxDescription);
             this.groupBoxCreateUpdate.Controls.Add(this.label4);
-            this.groupBoxCreateUpdate.Controls.Add(this.label3);
             this.groupBoxCreateUpdate.Controls.Add(this.label1);
             this.groupBoxCreateUpdate.Controls.Add(this.textBoxBandName);
-            this.groupBoxCreateUpdate.Controls.Add(this.textBoxTypeBand);
             this.groupBoxCreateUpdate.Location = new System.Drawing.Point(35, 28);
             this.groupBoxCreateUpdate.Name = "groupBoxCreateUpdate";
             this.groupBoxCreateUpdate.Size = new System.Drawing.Size(713, 290);
@@ -108,6 +108,7 @@
             this.buttonInsertBand.TabIndex = 7;
             this.buttonInsertBand.Text = "Insert band";
             this.buttonInsertBand.UseVisualStyleBackColor = true;
+            this.buttonInsertBand.Click += new System.EventHandler(this.buttonInsertBand_Click);
             // 
             // buttonUpdateBand
             // 
@@ -117,10 +118,11 @@
             this.buttonUpdateBand.TabIndex = 6;
             this.buttonUpdateBand.Text = "Update band name by name";
             this.buttonUpdateBand.UseVisualStyleBackColor = true;
+            this.buttonUpdateBand.Click += new System.EventHandler(this.buttonUpdateBand_Click);
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(40, 243);
+            this.textBoxDescription.Location = new System.Drawing.Point(40, 156);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(191, 27);
             this.textBoxDescription.TabIndex = 5;
@@ -128,20 +130,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 200);
+            this.label4.Location = new System.Drawing.Point(40, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Description of type:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Type of band:";
             // 
             // label1
             // 
@@ -159,12 +152,21 @@
             this.textBoxBandName.Size = new System.Drawing.Size(191, 27);
             this.textBoxBandName.TabIndex = 1;
             // 
-            // textBoxTypeBand
+            // label3
             // 
-            this.textBoxTypeBand.Location = new System.Drawing.Point(40, 156);
-            this.textBoxTypeBand.Name = "textBoxTypeBand";
-            this.textBoxTypeBand.Size = new System.Drawing.Size(191, 27);
-            this.textBoxTypeBand.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(40, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "New band name:";
+            // 
+            // textBoxNewBandName
+            // 
+            this.textBoxNewBandName.Location = new System.Drawing.Point(40, 234);
+            this.textBoxNewBandName.Name = "textBoxNewBandName";
+            this.textBoxNewBandName.Size = new System.Drawing.Size(191, 27);
+            this.textBoxNewBandName.TabIndex = 5;
             // 
             // EditBand
             // 
@@ -191,12 +193,12 @@
         private System.Windows.Forms.Button buttonDeleteBand;
         private System.Windows.Forms.GroupBox groupBoxCreateUpdate;
         private System.Windows.Forms.TextBox textBoxBandName;
-        private System.Windows.Forms.TextBox textBoxTypeBand;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonInsertBand;
         private System.Windows.Forms.Button buttonUpdateBand;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxNewBandName;
         private System.Windows.Forms.Label label3;
     }
 }
