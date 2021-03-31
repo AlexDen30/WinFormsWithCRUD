@@ -43,6 +43,7 @@
             this.buttonSeePerfomances = new System.Windows.Forms.Button();
             this.listDiscs = new System.Windows.Forms.ListBox();
             this.listPerfomances = new System.Windows.Forms.ListBox();
+            this.buttonSerializeDiscs = new System.Windows.Forms.Button();
             this.Bands.SuspendLayout();
             this.Musicians.SuspendLayout();
             this.PerfomedSongs.SuspendLayout();
@@ -134,6 +135,7 @@
             // 
             // PerfomedSongs
             // 
+            this.PerfomedSongs.Controls.Add(this.buttonSerializeDiscs);
             this.PerfomedSongs.Controls.Add(this.buttonEditDiscs);
             this.PerfomedSongs.Controls.Add(this.buttonSeeDiscs);
             this.PerfomedSongs.Controls.Add(this.buttonEditPerfomances);
@@ -207,6 +209,16 @@
             this.listPerfomances.Size = new System.Drawing.Size(254, 344);
             this.listPerfomances.TabIndex = 0;
             // 
+            // buttonSerializeDiscs
+            // 
+            this.buttonSerializeDiscs.Location = new System.Drawing.Point(491, 204);
+            this.buttonSerializeDiscs.Name = "buttonSerializeDiscs";
+            this.buttonSerializeDiscs.Size = new System.Drawing.Size(128, 50);
+            this.buttonSerializeDiscs.TabIndex = 6;
+            this.buttonSerializeDiscs.Text = "Serialize discs";
+            this.buttonSerializeDiscs.UseVisualStyleBackColor = true;
+            this.buttonSerializeDiscs.Click += new System.EventHandler(this.buttonSerializeDiscs_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -243,6 +255,7 @@
         private System.Windows.Forms.ListBox listDiscs;
         private System.Windows.Forms.ListBox listPerfomances;
         private System.Windows.Forms.Button buttonSeeMusicians;
+        private System.Windows.Forms.Button buttonSerializeDiscs;
     }
 }
 

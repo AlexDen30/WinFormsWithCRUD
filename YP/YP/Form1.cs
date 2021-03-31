@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YP.ModelsAndRepos.Bands;
 using YP.ModelsAndRepos.Discs;
 using YP.ModelsAndRepos.Musicians;
 using YP.ModelsAndRepos.PerformedSongs;
+using System.IO;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace YP
 {
@@ -128,6 +126,25 @@ namespace YP
 
 
                 listPerfomances.Items.Add(toList);
+            }
+        }
+
+        private void buttonSerializeDiscs_Click(object sender, EventArgs e)
+        {
+            using (FileStream fs = new FileStream("discs.json", FileMode.OpenOrCreate))
+            {
+                IDiscsRepository discsRep = new DiscsRepository();
+                List<DiscModel> discs = discsRep.GetAllDiscs().ToList();
+
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                foreach (DiscModel disc in discs)
+                {
+                    JsonSerializer.SerializeAsync(fs, disc, options);
+                }
             }
         }
     }
