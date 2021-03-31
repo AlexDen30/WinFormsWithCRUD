@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YP.ModelsAndRepos.Bands;
+using YP.ModelsAndRepos.Discs;
 using YP.ModelsAndRepos.Musicians;
 
 namespace YP
@@ -59,15 +60,16 @@ namespace YP
 
             foreach(BandModel band in bands)
             {
-                string toList = band.BandName + ", " + band.DiscriptionOfType;
+                string toList = "Id:" + band.BandId + ", Name:" + band.BandName
+                    + ", Description:" + band.DiscriptionOfType;
                 listBands.Items.Add(toList);
             }
         }
 
         private void buttonSeeMusicians_Click(object sender, EventArgs e)
         {
-            IMusiciansRepository bandsRep = new MusiciansRepository();
-            List<MusicianModel> musicians = bandsRep.GetAllMusicians().ToList();
+            IMusiciansRepository musRep = new MusiciansRepository();
+            List<MusicianModel> musicians = musRep.GetAllMusicians().ToList();
 
             listMusicians.Items.Clear();
 
@@ -85,6 +87,28 @@ namespace YP
                 }
                  
                 listMusicians.Items.Add(toList);
+            }
+        }
+
+        private void buttonSeeDiscs_Click(object sender, EventArgs e)
+        {
+            IDiscsRepository discsRep = new DiscsRepository();
+            List<DiscModel> discs = discsRep.GetAllDiscs().ToList();
+
+            listDiscs.Items.Clear();
+
+            foreach (DiscModel disc in discs)
+            {
+                string toList = "Disc title:" + disc.Title + ", disc serial number:" +
+                    disc.SerialNumber + ", date of release:" + disc.DateOfRelease +
+                    ", sold in current year:" + disc.SaledInCurrentYear + ", in last year:" +
+                    disc.SaledInLastYear + ", how much left:" + disc.HowMuchLeft +
+                    ", retail price:" + disc.RetailPrice + ", wholesale:" +
+                    disc.WholesalePrice + ", wholesale company:" + disc.WholesaleCompany +
+                    ", list of songs:" + disc.ListOfSongs;
+
+
+                listDiscs.Items.Add(toList);
             }
         }
     }

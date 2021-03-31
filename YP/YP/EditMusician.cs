@@ -22,6 +22,7 @@ namespace YP
                 || textBoxDiscription.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IMusiciansRepository musRep = new MusiciansRepository();
@@ -50,6 +51,7 @@ namespace YP
             if (textBoxFirstName.Text == "" || textBoxSurname.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IMusiciansRepository musRep = new MusiciansRepository();
@@ -78,6 +80,7 @@ namespace YP
             if (textBoxFirstNameDelete.Text == "" || textBoxSurnameDelete.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IMusiciansRepository musRep = new MusiciansRepository();

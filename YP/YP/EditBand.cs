@@ -33,6 +33,7 @@ namespace YP
             if (textBoxNameDelete.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IBandsRepository bandsRep = new BandsRepository();
@@ -61,6 +62,7 @@ namespace YP
             if (textBoxBandName.Text == "" || textBoxNewBandName.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IBandsRepository bandsRep = new BandsRepository();
@@ -85,6 +87,7 @@ namespace YP
             if (textBoxBandName.Text == "" || textBoxDescription.Text == "")
             {
                 MessageBox.Show("Wrong input!");
+                return;
             }
 
             IBandsRepository bandsRep = new BandsRepository();

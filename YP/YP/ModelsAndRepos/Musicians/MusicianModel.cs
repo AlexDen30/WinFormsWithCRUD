@@ -23,20 +23,6 @@ namespace YP.ModelsAndRepos.Musicians
         public string BandName { get; set; }
     }
 
-    //public class MusicRole
-    //{
-    //    [Key]
-    //    public int RoleId { get; set; }
-
-    //    public string DiscriptionOfRole { get; set; }
-    //}
-
-    //public class MusicianHasBand
-    //{
-    //    public int MusicianId { get; set; }
-
-    //    public int BandId { get; set; }
-    //}
-
+    
    
 }

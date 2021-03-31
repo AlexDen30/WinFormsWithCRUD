@@ -41,22 +41,22 @@
             this.textBoxBandId = new System.Windows.Forms.TextBox();
             this.groupBoxDeleteDisc = new System.Windows.Forms.GroupBox();
             this.groupBoxCreateUpdateDisc = new System.Windows.Forms.GroupBox();
-            this.textBoxRetailPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDateOfRelease = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxSaledInLastYear = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxSaledInCurrentYear = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxHowMuchLeft = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxWholeSaleCompany = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxListOfSings = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxListOfSongs = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxWholeSaleCompany = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxHowMuchLeft = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxSaledInCurrentYear = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxSaledInLastYear = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxDateOfRelease = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxRetailPrice = new System.Windows.Forms.TextBox();
             this.groupBoxDeleteDisc.SuspendLayout();
             this.groupBoxCreateUpdateDisc.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.buttonDeleteDisc.TabIndex = 3;
             this.buttonDeleteDisc.Text = "Delete";
             this.buttonDeleteDisc.UseVisualStyleBackColor = true;
+            this.buttonDeleteDisc.Click += new System.EventHandler(this.buttonDeleteDisc_Click);
             // 
             // label1
             // 
@@ -89,11 +90,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 203);
+            this.label2.Location = new System.Drawing.Point(27, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(237, 20);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Wholesale price:";
+            this.label2.Text = "Wholesale price(may be updated):";
             // 
             // textBoxWholesalePrice
             // 
@@ -110,6 +111,7 @@
             this.buttonInsertDisc.TabIndex = 7;
             this.buttonInsertDisc.Text = "Insert disc";
             this.buttonInsertDisc.UseVisualStyleBackColor = true;
+            this.buttonInsertDisc.Click += new System.EventHandler(this.buttonInsertDisc_Click);
             // 
             // buttonUpdateDisc
             // 
@@ -119,11 +121,12 @@
             this.buttonUpdateDisc.TabIndex = 6;
             this.buttonUpdateDisc.Text = "Update by serial number";
             this.buttonUpdateDisc.UseVisualStyleBackColor = true;
+            this.buttonUpdateDisc.Click += new System.EventHandler(this.buttonUpdateDisc_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 120);
+            this.label3.Location = new System.Drawing.Point(27, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 3;
@@ -132,7 +135,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 42);
+            this.label4.Location = new System.Drawing.Point(27, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 2;
@@ -169,7 +172,7 @@
             this.groupBoxCreateUpdateDisc.Controls.Add(this.label12);
             this.groupBoxCreateUpdateDisc.Controls.Add(this.textBoxSerialNumber);
             this.groupBoxCreateUpdateDisc.Controls.Add(this.label11);
-            this.groupBoxCreateUpdateDisc.Controls.Add(this.textBoxListOfSings);
+            this.groupBoxCreateUpdateDisc.Controls.Add(this.textBoxListOfSongs);
             this.groupBoxCreateUpdateDisc.Controls.Add(this.label10);
             this.groupBoxCreateUpdateDisc.Controls.Add(this.textBoxWholeSaleCompany);
             this.groupBoxCreateUpdateDisc.Controls.Add(this.label9);
@@ -197,92 +200,38 @@
             this.groupBoxCreateUpdateDisc.TabStop = false;
             this.groupBoxCreateUpdateDisc.Text = "Create and update disc";
             // 
-            // textBoxRetailPrice
+            // label12
             // 
-            this.textBoxRetailPrice.Location = new System.Drawing.Point(40, 318);
-            this.textBoxRetailPrice.Name = "textBoxRetailPrice";
-            this.textBoxRetailPrice.Size = new System.Drawing.Size(191, 27);
-            this.textBoxRetailPrice.TabIndex = 9;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(273, 363);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(188, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Serial number (for update):";
             // 
-            // label5
+            // textBoxSerialNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 283);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Retail price:";
+            this.textBoxSerialNumber.Location = new System.Drawing.Point(273, 398);
+            this.textBoxSerialNumber.Name = "textBoxSerialNumber";
+            this.textBoxSerialNumber.Size = new System.Drawing.Size(191, 27);
+            this.textBoxSerialNumber.TabIndex = 9;
             // 
-            // textBoxDateOfRelease
+            // label11
             // 
-            this.textBoxDateOfRelease.Location = new System.Drawing.Point(40, 398);
-            this.textBoxDateOfRelease.Name = "textBoxDateOfRelease";
-            this.textBoxDateOfRelease.Size = new System.Drawing.Size(191, 27);
-            this.textBoxDateOfRelease.TabIndex = 9;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(519, 42);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(225, 20);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "List of songs: (1.name|2.name| ...)";
             // 
-            // label6
+            // textBoxListOfSongs
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 363);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Date of release (dd.mm.yy):";
-            // 
-            // textBoxSaledInLastYear
-            // 
-            this.textBoxSaledInLastYear.Location = new System.Drawing.Point(273, 76);
-            this.textBoxSaledInLastYear.Name = "textBoxSaledInLastYear";
-            this.textBoxSaledInLastYear.Size = new System.Drawing.Size(191, 27);
-            this.textBoxSaledInLastYear.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(273, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Saled in last year:";
-            // 
-            // textBoxSaledInCurrentYear
-            // 
-            this.textBoxSaledInCurrentYear.Location = new System.Drawing.Point(273, 155);
-            this.textBoxSaledInCurrentYear.Name = "textBoxSaledInCurrentYear";
-            this.textBoxSaledInCurrentYear.Size = new System.Drawing.Size(191, 27);
-            this.textBoxSaledInCurrentYear.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(273, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Saled in current year:";
-            // 
-            // textBoxHowMuchLeft
-            // 
-            this.textBoxHowMuchLeft.Location = new System.Drawing.Point(273, 235);
-            this.textBoxHowMuchLeft.Name = "textBoxHowMuchLeft";
-            this.textBoxHowMuchLeft.Size = new System.Drawing.Size(191, 27);
-            this.textBoxHowMuchLeft.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(273, 200);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "How much left:";
-            // 
-            // textBoxWholeSaleCompany
-            // 
-            this.textBoxWholeSaleCompany.Location = new System.Drawing.Point(273, 318);
-            this.textBoxWholeSaleCompany.Name = "textBoxWholeSaleCompany";
-            this.textBoxWholeSaleCompany.Size = new System.Drawing.Size(191, 27);
-            this.textBoxWholeSaleCompany.TabIndex = 9;
+            this.textBoxListOfSongs.Location = new System.Drawing.Point(519, 76);
+            this.textBoxListOfSongs.Multiline = true;
+            this.textBoxListOfSongs.Name = "textBoxListOfSongs";
+            this.textBoxListOfSongs.Size = new System.Drawing.Size(278, 349);
+            this.textBoxListOfSongs.TabIndex = 9;
             // 
             // label10
             // 
@@ -293,38 +242,92 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Wholesale company:";
             // 
-            // textBoxListOfSings
+            // textBoxWholeSaleCompany
             // 
-            this.textBoxListOfSings.Location = new System.Drawing.Point(519, 76);
-            this.textBoxListOfSings.Multiline = true;
-            this.textBoxListOfSings.Name = "textBoxListOfSings";
-            this.textBoxListOfSings.Size = new System.Drawing.Size(278, 349);
-            this.textBoxListOfSings.TabIndex = 9;
+            this.textBoxWholeSaleCompany.Location = new System.Drawing.Point(273, 318);
+            this.textBoxWholeSaleCompany.Name = "textBoxWholeSaleCompany";
+            this.textBoxWholeSaleCompany.Size = new System.Drawing.Size(191, 27);
+            this.textBoxWholeSaleCompany.TabIndex = 9;
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(519, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 20);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "List of songs:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(273, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(228, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "How much left(may be updated):";
             // 
-            // textBoxSerialNumber
+            // textBoxHowMuchLeft
             // 
-            this.textBoxSerialNumber.Location = new System.Drawing.Point(273, 398);
-            this.textBoxSerialNumber.Name = "textBoxSerialNumber";
-            this.textBoxSerialNumber.Size = new System.Drawing.Size(191, 27);
-            this.textBoxSerialNumber.TabIndex = 9;
+            this.textBoxHowMuchLeft.Location = new System.Drawing.Point(273, 235);
+            this.textBoxHowMuchLeft.Name = "textBoxHowMuchLeft";
+            this.textBoxHowMuchLeft.Size = new System.Drawing.Size(191, 27);
+            this.textBoxHowMuchLeft.TabIndex = 9;
             // 
-            // label12
+            // label8
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(273, 363);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(188, 20);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Serial number (for update):";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(273, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(238, 20);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Sold in current year(m.b. updated):";
+            // 
+            // textBoxSaledInCurrentYear
+            // 
+            this.textBoxSaledInCurrentYear.Location = new System.Drawing.Point(273, 155);
+            this.textBoxSaledInCurrentYear.Name = "textBoxSaledInCurrentYear";
+            this.textBoxSaledInCurrentYear.Size = new System.Drawing.Size(191, 27);
+            this.textBoxSaledInCurrentYear.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(273, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Saled in last year:";
+            // 
+            // textBoxSaledInLastYear
+            // 
+            this.textBoxSaledInLastYear.Location = new System.Drawing.Point(273, 76);
+            this.textBoxSaledInLastYear.Name = "textBoxSaledInLastYear";
+            this.textBoxSaledInLastYear.Size = new System.Drawing.Size(191, 27);
+            this.textBoxSaledInLastYear.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 363);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Date of release (dd.mm.yy):";
+            // 
+            // textBoxDateOfRelease
+            // 
+            this.textBoxDateOfRelease.Location = new System.Drawing.Point(40, 398);
+            this.textBoxDateOfRelease.Name = "textBoxDateOfRelease";
+            this.textBoxDateOfRelease.Size = new System.Drawing.Size(191, 27);
+            this.textBoxDateOfRelease.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 283);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(206, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Retail price(may be updated):";
+            // 
+            // textBoxRetailPrice
+            // 
+            this.textBoxRetailPrice.Location = new System.Drawing.Point(40, 318);
+            this.textBoxRetailPrice.Name = "textBoxRetailPrice";
+            this.textBoxRetailPrice.Size = new System.Drawing.Size(191, 27);
+            this.textBoxRetailPrice.TabIndex = 9;
             // 
             // EditDisc
             // 
@@ -362,7 +365,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxSerialNumber;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBoxListOfSings;
+        private System.Windows.Forms.TextBox textBoxListOfSongs;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxWholeSaleCompany;
         private System.Windows.Forms.Label label9;

@@ -1,10 +1,7 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
-using System.Data;
-using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.Types;
 using Dapper;
 
 namespace YP.ModelsAndRepos.Bands

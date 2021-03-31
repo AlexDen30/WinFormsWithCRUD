@@ -83,6 +83,7 @@
             // listBands
             // 
             this.listBands.FormattingEnabled = true;
+            this.listBands.HorizontalScrollbar = true;
             this.listBands.ItemHeight = 20;
             this.listBands.Location = new System.Drawing.Point(171, 26);
             this.listBands.Name = "listBands";
@@ -164,6 +165,7 @@
             this.buttonSeeDiscs.TabIndex = 4;
             this.buttonSeeDiscs.Text = "See discs";
             this.buttonSeeDiscs.UseVisualStyleBackColor = true;
+            this.buttonSeeDiscs.Click += new System.EventHandler(this.buttonSeeDiscs_Click);
             // 
             // buttonEditPerfomances
             // 
@@ -187,6 +189,7 @@
             // listDiscs
             // 
             this.listDiscs.FormattingEnabled = true;
+            this.listDiscs.HorizontalScrollbar = true;
             this.listDiscs.ItemHeight = 20;
             this.listDiscs.Location = new System.Drawing.Point(664, 26);
             this.listDiscs.Name = "listDiscs";
@@ -196,6 +199,7 @@
             // listPerfomances
             // 
             this.listPerfomances.FormattingEnabled = true;
+            this.listPerfomances.HorizontalScrollbar = true;
             this.listPerfomances.ItemHeight = 20;
             this.listPerfomances.Location = new System.Drawing.Point(171, 26);
             this.listPerfomances.Name = "listPerfomances";
