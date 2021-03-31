@@ -185,6 +185,7 @@
             this.buttonSeePerfomances.TabIndex = 2;
             this.buttonSeePerfomances.Text = "See perfomances";
             this.buttonSeePerfomances.UseVisualStyleBackColor = true;
+            this.buttonSeePerfomances.Click += new System.EventHandler(this.buttonSeePerfomances_Click);
             // 
             // listDiscs
             // 

@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDeletePerformance = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDeleteId = new System.Windows.Forms.TextBox();
             this.textBoxPerformanceId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonInsertPerfomance = new System.Windows.Forms.Button();
@@ -43,11 +43,9 @@
             this.textBoxCircumstancesPerformance = new System.Windows.Forms.TextBox();
             this.groupBoxDeletePerformance = new System.Windows.Forms.GroupBox();
             this.groupBoxPerfomanceCreateUpdate = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxAuthorId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxDiscNumber = new System.Windows.Forms.TextBox();
-            this.textBoxNumberOnDisc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBoxDeletePerformance.SuspendLayout();
             this.groupBoxPerfomanceCreateUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +67,7 @@
             this.buttonDeletePerformance.TabIndex = 3;
             this.buttonDeletePerformance.Text = "Delete";
             this.buttonDeletePerformance.UseVisualStyleBackColor = true;
+            this.buttonDeletePerformance.Click += new System.EventHandler(this.buttonDeletePerformance_Click);
             // 
             // label2
             // 
@@ -79,12 +78,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Performance id:";
             // 
-            // textBox2
+            // textBoxDeleteId
             // 
-            this.textBox2.Location = new System.Drawing.Point(20, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 27);
-            this.textBox2.TabIndex = 0;
+            this.textBoxDeleteId.Location = new System.Drawing.Point(20, 76);
+            this.textBoxDeleteId.Name = "textBoxDeleteId";
+            this.textBoxDeleteId.Size = new System.Drawing.Size(196, 27);
+            this.textBoxDeleteId.TabIndex = 0;
             // 
             // textBoxPerformanceId
             // 
@@ -110,6 +109,7 @@
             this.buttonInsertPerfomance.TabIndex = 7;
             this.buttonInsertPerfomance.Text = "Insert performance";
             this.buttonInsertPerfomance.UseVisualStyleBackColor = true;
+            this.buttonInsertPerfomance.Click += new System.EventHandler(this.buttonInsertPerfomance_Click);
             // 
             // buttonUpdatePerformance
             // 
@@ -119,6 +119,7 @@
             this.buttonUpdatePerformance.TabIndex = 6;
             this.buttonUpdatePerformance.Text = "Update by performance id";
             this.buttonUpdatePerformance.UseVisualStyleBackColor = true;
+            this.buttonUpdatePerformance.Click += new System.EventHandler(this.buttonUpdatePerformance_Click);
             // 
             // label4
             // 
@@ -134,9 +135,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(40, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 20);
+            this.label5.Size = new System.Drawing.Size(306, 20);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Circumstances of perfomance:";
+            this.label5.Text = "Circumstances of perfomance(m.b. updated):";
             // 
             // label6
             // 
@@ -165,7 +166,7 @@
             // 
             this.groupBoxDeletePerformance.Controls.Add(this.buttonDeletePerformance);
             this.groupBoxDeletePerformance.Controls.Add(this.label2);
-            this.groupBoxDeletePerformance.Controls.Add(this.textBox2);
+            this.groupBoxDeletePerformance.Controls.Add(this.textBoxDeleteId);
             this.groupBoxDeletePerformance.Location = new System.Drawing.Point(188, 463);
             this.groupBoxDeletePerformance.Name = "groupBoxDeletePerformance";
             this.groupBoxDeletePerformance.Size = new System.Drawing.Size(273, 179);
@@ -175,9 +176,7 @@
             // 
             // groupBoxPerfomanceCreateUpdate
             // 
-            this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.textBoxNumberOnDisc);
-            this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.textBoxDiscNumber);
-            this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.label9);
+            this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.textBoxAuthorId);
             this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.label8);
             this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.label7);
             this.groupBoxPerfomanceCreateUpdate.Controls.Add(this.textBoxPerformanceId);
@@ -194,46 +193,30 @@
             this.groupBoxPerfomanceCreateUpdate.TabStop = false;
             this.groupBoxPerfomanceCreateUpdate.Text = "Create and update perfomance";
             // 
-            // label7
+            // textBoxAuthorId
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 182);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Perfomance id:";
+            this.textBoxAuthorId.Location = new System.Drawing.Point(40, 268);
+            this.textBoxAuthorId.Name = "textBoxAuthorId";
+            this.textBoxAuthorId.Size = new System.Drawing.Size(191, 27);
+            this.textBoxAuthorId.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(40, 245);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(260, 20);
+            this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 11;
-            this.label8.Text = "Disc serial number (if exists, for insert)";
+            this.label8.Text = "Author id:";
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(40, 314);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(278, 20);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Song number on disc (if exists, for insert)";
-            // 
-            // textBoxDiscNumber
-            // 
-            this.textBoxDiscNumber.Location = new System.Drawing.Point(40, 268);
-            this.textBoxDiscNumber.Name = "textBoxDiscNumber";
-            this.textBoxDiscNumber.Size = new System.Drawing.Size(191, 27);
-            this.textBoxDiscNumber.TabIndex = 9;
-            // 
-            // textBoxNumberOnDisc
-            // 
-            this.textBoxNumberOnDisc.Location = new System.Drawing.Point(40, 337);
-            this.textBoxNumberOnDisc.Name = "textBoxNumberOnDisc";
-            this.textBoxNumberOnDisc.Size = new System.Drawing.Size(191, 27);
-            this.textBoxNumberOnDisc.TabIndex = 9;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(40, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Perfomance id(for update):";
             // 
             // EditPerformance
             // 
@@ -257,7 +240,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonDeletePerformance;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDeleteId;
         private System.Windows.Forms.TextBox textBoxPerformanceId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonInsertPerfomance;
@@ -270,9 +253,7 @@
         private System.Windows.Forms.GroupBox groupBoxDeletePerformance;
         private System.Windows.Forms.GroupBox groupBoxPerfomanceCreateUpdate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxNumberOnDisc;
-        private System.Windows.Forms.TextBox textBoxDiscNumber;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxAuthorId;
         private System.Windows.Forms.Label label8;
     }
 }

@@ -93,7 +93,7 @@ namespace YP
 
             if (flag)
             {
-                MessageBox.Show("Posted!");
+                MessageBox.Show("Updated!");
             }
             else
             {

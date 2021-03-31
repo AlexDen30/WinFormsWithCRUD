@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using YP.ModelsAndRepos.Bands;
 using YP.ModelsAndRepos.Discs;
 using YP.ModelsAndRepos.Musicians;
+using YP.ModelsAndRepos.PerformedSongs;
 
 namespace YP
 {
@@ -75,7 +76,7 @@ namespace YP
 
             foreach (MusicianModel musician in musicians)
             {
-                string toList = "First name: " + musician.FirstName + ", Second name:"
+                string toList = "Musician id:" + musician.MusicianId + ", First name: " + musician.FirstName + ", Second name:"
                     + musician.Surname + ", Role description:" + musician.DiscriptionOfRole +
                     ", Current band:";
                 if (musician.BandName == null)
@@ -109,6 +110,24 @@ namespace YP
 
 
                 listDiscs.Items.Add(toList);
+            }
+        }
+
+        private void buttonSeePerfomances_Click(object sender, EventArgs e)
+        {
+            ISongsRepository songsRep = new SongsRepository();
+            List<PerformedSongModel> songs = songsRep.GetAllPSongs().ToList();
+
+            listPerfomances.Items.Clear();
+
+            foreach (PerformedSongModel song in songs)
+            {
+                string toList = "Performance id:" + song.PerformanceId +
+                    ", Song name:" + song.SongName + ", Circumstances of perfomance:" +
+                    song.CircumstancesOfPerfomance + ", Author id:" + song.AuthorId;
+
+
+                listPerfomances.Items.Add(toList);
             }
         }
     }

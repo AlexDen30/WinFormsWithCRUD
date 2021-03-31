@@ -7,15 +7,6 @@ using System.Threading.Tasks;
 
 namespace YP.ModelsAndRepos.PerformedSongs
 {
-    public class SongModel
-    {
-        [Key]
-        public int SongId { get; set; }
-
-        public string SongName { get; set; }
-
-        public string CircumstancesOfWriting { get; set; }
-    }
 
     public class PerformedSongModel
     {
@@ -27,21 +18,8 @@ namespace YP.ModelsAndRepos.PerformedSongs
         public string SongName { get; set; }
 
         public string CircumstancesOfPerfomance { get; set; }
-    }
 
-    public class DiscHasSong
-    {
-        public int SongPerfomanceId { get; set; }
-        public int DiscSerialNumber { get; set; }
-        public int SongNumber { get; set; }
-
-    }
-
-    public class AuthorOfASong
-    {
         public int AuthorId { get; set; }
-
-        public int SongId { get; set; }
     }
 
 }
