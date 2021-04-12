@@ -8,7 +8,7 @@ using YP.ModelsAndRepos.Musicians;
 using YP.ModelsAndRepos.PerformedSongs;
 using System.IO;
 using System.Text.Json;
-using System.Threading.Tasks;
+using ClosedXML.Excel;
 
 namespace YP
 {
@@ -146,6 +146,55 @@ namespace YP
                     JsonSerializer.SerializeAsync(fs, disc, options);
                 }
             }
+        }
+
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+            var workbook = new XLWorkbook();
+
+            IXLWorksheet worksheet = workbook.Worksheets.Add("Bands");
+            IBandsRepository bandRep = new BandsRepository();
+            List<BandModel> bands = bandRep.GetAllBands().ToList();
+
+            worksheet.Cell(1, 1).Value = "Band Id";
+            worksheet.Cell(1, 2).Value = "Type Id";
+            worksheet.Cell(1, 3).Value = "Band name";
+            worksheet.Cell(1, 4).Value = "DescriptionOfType";
+
+            int i = 2;
+            foreach (BandModel band in bands)
+            {
+                worksheet.Cell(i, 1).Value = band.BandId.ToString();
+                worksheet.Cell(i, 2).Value = band.TypeId.ToString();
+                worksheet.Cell(i, 3).Value = band.BandName;
+                worksheet.Cell(i, 4).Value = band.DiscriptionOfType;
+                i++;
+            }
+
+
+            using (FileStream fs = new FileStream("bands.xlsx", FileMode.OpenOrCreate))
+            {
+                workbook.SaveAs(fs);
+            }
+
+            //Excel.Application excelApp = new Excel.Application();
+
+            //IBandsRepository bandRep = new BandsRepository();
+            //List<BandModel> bands = bandRep.GetAllBands().ToList();
+
+            //excelApp.Workbooks.Add();
+            //Excel.Worksheet workSht = (Excel.Worksheet)excelApp.ActiveSheet;
+
+            //int i = 0;
+            //foreach (BandModel band in bands)
+            //{
+            //    workSht.Cells[i, 0] = band.BandId.ToString();
+            //    workSht.Cells[i, 1] = band.TypeId.ToString();
+            //    workSht.Cells[i, 2] = band.BandName;
+            //    workSht.Cells[i, 3] = band.DiscriptionOfType;
+            //}
+
+            //excelApp.Visible = true;
         }
     }
 

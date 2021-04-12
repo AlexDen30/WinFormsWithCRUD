@@ -37,13 +37,14 @@
             this.buttonSeeMusicians = new System.Windows.Forms.Button();
             this.listMusicians = new System.Windows.Forms.ListBox();
             this.PerfomedSongs = new System.Windows.Forms.GroupBox();
+            this.buttonSerializeDiscs = new System.Windows.Forms.Button();
             this.buttonEditDiscs = new System.Windows.Forms.Button();
             this.buttonSeeDiscs = new System.Windows.Forms.Button();
             this.buttonEditPerfomances = new System.Windows.Forms.Button();
             this.buttonSeePerfomances = new System.Windows.Forms.Button();
             this.listDiscs = new System.Windows.Forms.ListBox();
             this.listPerfomances = new System.Windows.Forms.ListBox();
-            this.buttonSerializeDiscs = new System.Windows.Forms.Button();
+            this.buttonExcel = new System.Windows.Forms.Button();
             this.Bands.SuspendLayout();
             this.Musicians.SuspendLayout();
             this.PerfomedSongs.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // Bands
             // 
+            this.Bands.Controls.Add(this.buttonExcel);
             this.Bands.Controls.Add(this.buttonEditBands);
             this.Bands.Controls.Add(this.buttonSeeBands);
             this.Bands.Controls.Add(this.listBands);
@@ -149,6 +151,16 @@
             this.PerfomedSongs.TabStop = false;
             this.PerfomedSongs.Text = "Discs and Performances";
             // 
+            // buttonSerializeDiscs
+            // 
+            this.buttonSerializeDiscs.Location = new System.Drawing.Point(491, 204);
+            this.buttonSerializeDiscs.Name = "buttonSerializeDiscs";
+            this.buttonSerializeDiscs.Size = new System.Drawing.Size(128, 50);
+            this.buttonSerializeDiscs.TabIndex = 6;
+            this.buttonSerializeDiscs.Text = "Serialize discs";
+            this.buttonSerializeDiscs.UseVisualStyleBackColor = true;
+            this.buttonSerializeDiscs.Click += new System.EventHandler(this.buttonSerializeDiscs_Click);
+            // 
             // buttonEditDiscs
             // 
             this.buttonEditDiscs.Location = new System.Drawing.Point(491, 134);
@@ -209,15 +221,15 @@
             this.listPerfomances.Size = new System.Drawing.Size(254, 344);
             this.listPerfomances.TabIndex = 0;
             // 
-            // buttonSerializeDiscs
+            // buttonExcel
             // 
-            this.buttonSerializeDiscs.Location = new System.Drawing.Point(491, 204);
-            this.buttonSerializeDiscs.Name = "buttonSerializeDiscs";
-            this.buttonSerializeDiscs.Size = new System.Drawing.Size(128, 50);
-            this.buttonSerializeDiscs.TabIndex = 6;
-            this.buttonSerializeDiscs.Text = "Serialize discs";
-            this.buttonSerializeDiscs.UseVisualStyleBackColor = true;
-            this.buttonSerializeDiscs.Click += new System.EventHandler(this.buttonSerializeDiscs_Click);
+            this.buttonExcel.Location = new System.Drawing.Point(24, 200);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(123, 51);
+            this.buttonExcel.TabIndex = 3;
+            this.buttonExcel.Text = "To excel";
+            this.buttonExcel.UseVisualStyleBackColor = true;
+            this.buttonExcel.Click += new System.EventHandler(this.buttonExcel_Click);
             // 
             // Form1
             // 
@@ -256,6 +268,7 @@
         private System.Windows.Forms.ListBox listPerfomances;
         private System.Windows.Forms.Button buttonSeeMusicians;
         private System.Windows.Forms.Button buttonSerializeDiscs;
+        private System.Windows.Forms.Button buttonExcel;
     }
 }
 
